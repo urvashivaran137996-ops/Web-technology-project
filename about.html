@@ -8,7 +8,7 @@
     <meta name="viewport"
           content="width=device-width, initial-scale=1.0">
 
-    <title>About - DNA Analyzer</title>
+    <title>Contact</title>
 
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
           rel="stylesheet">
@@ -67,14 +67,14 @@
                 </li>
 
                 <li class="nav-item">
-                    <a class="nav-link active"
+                    <a class="nav-link"
                        href="about.html">
                         About
                     </a>
                 </li>
 
                 <li class="nav-item">
-                    <a class="nav-link"
+                    <a class="nav-link active"
                        href="contact.html">
                         Contact
                     </a>
@@ -95,94 +95,84 @@
 
         <div class="section-title">
 
-            <span class="badge bg-primary">
-                About Project
-            </span>
-
-            <h1>DNA Sequencing Analyzer</h1>
+            <h1>Contact Us</h1>
 
             <p>
-                A Web Technology based Bioinformatics project.
+                Have a question about the project?
             </p>
 
         </div>
 
 
-        <div class="row g-4">
+        <div class="row justify-content-center">
 
-            <div class="col-lg-6">
+            <div class="col-lg-8">
 
-                <div class="info-card">
+                <div class="contact-card">
 
-                    <h3>🧬 Project Overview</h3>
+                    <form onsubmit="showMessage(event)">
 
-                    <p>
-                        DNA Sequencing Analyzer is a web-based
-                        application designed to perform basic
-                        analysis of DNA sequences.
-                    </p>
+                        <div class="mb-3">
 
-                    <p>
-                        The application accepts a DNA sequence
-                        and calculates nucleotide composition,
-                        sequence length, GC content and AT content.
-                    </p>
+                            <label class="form-label">
+                                Name
+                            </label>
 
-                </div>
+                            <input type="text"
+                                   class="form-control"
+                                   required
+                                   placeholder="Enter your name">
 
-            </div>
-
-
-            <div class="col-lg-6">
-
-                <div class="info-card">
-
-                    <h3>💻 Technologies Used</h3>
-
-                    <ul>
-
-                        <li>HTML5</li>
-
-                        <li>CSS3</li>
-
-                        <li>JavaScript</li>
-
-                        <li>Bootstrap 5</li>
-
-                    </ul>
-
-                </div>
-
-            </div>
-
-
-            <div class="col-12">
-
-                <div class="info-card">
-
-                    <h3>🎯 Project Objectives</h3>
-
-                    <div class="row">
-
-                        <div class="col-md-4">
-                            <p>
-                                ✔ Validate DNA sequences
-                            </p>
                         </div>
 
-                        <div class="col-md-4">
-                            <p>
-                                ✔ Calculate nucleotide counts
-                            </p>
+
+                        <div class="mb-3">
+
+                            <label class="form-label">
+                                Email
+                            </label>
+
+                            <input type="email"
+                                   class="form-control"
+                                   required
+                                   placeholder="Enter your email">
+
                         </div>
 
-                        <div class="col-md-4">
-                            <p>
-                                ✔ Generate sequence transformations
-                            </p>
+
+                        <div class="mb-3">
+
+                            <label class="form-label">
+                                Message
+                            </label>
+
+                            <textarea
+                                class="form-control"
+                                rows="5"
+                                required
+                                placeholder="Enter your message">
+                            </textarea>
+
                         </div>
 
-                    </div>
+
+                        <button type="submit"
+                                class="btn btn-primary">
+
+                            Send Message
+
+                        </button>
+
+
+                        <div id="message"
+                             class="alert alert-success mt-3 d-none">
+
+                            Thank you! Your message has been
+                            submitted successfully.
+
+                        </div>
+
+                    </form>
 
                 </div>
 
@@ -202,6 +192,22 @@
     </p>
 
 </footer>
+
+
+<script>
+
+function showMessage(event) {
+
+    event.preventDefault();
+
+    document
+        .getElementById("message")
+        .classList.remove("d-none");
+
+}
+
+</script>
+
 
 </body>
 </html>
